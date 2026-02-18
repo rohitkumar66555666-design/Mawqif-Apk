@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Mawqif",
+    "slug": "mawqif-prayer-finder",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "mawqif",
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4CAF50"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ],
+      "package": "com.mawqif.prayerfinder"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "This app needs access to location to find nearby prayer spaces when you're traveling."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "This app needs access to your photos to upload images of prayer spaces."
+        }
+      ]
+    ],
+    "extra": {
+      "supabaseUrl": "https://sqsawueagugzcgpbwsyi.supabase.co",
+      "supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxc2F3dWVhZ3VnemNncGJ3c3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTM2NTEsImV4cCI6MjA3ODU4OTY1MX0.vv64OV3IwRc7rggyL6hKBYp9zjtXPV0I5nscR4xImXo"
+    }
+  }
+}

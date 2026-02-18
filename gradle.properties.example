@@ -1,0 +1,29 @@
+# Gradle Properties Example for Release Build
+# Copy this to android/gradle.properties and fill in your values
+
+# Android Build Settings
+android.useAndroidX=true
+android.enableJetifier=true
+
+# Release Build Optimizations
+android.enableMinifyInReleaseBuilds=true
+android.enableShrinkResourcesInReleaseBuilds=true
+android.enablePngCrunchInReleaseBuilds=true
+
+# Release Signing Configuration
+# IMPORTANT: Replace these values with your actual keystore information
+# DO NOT commit this file with real passwords to version control!
+
+MAWQIF_UPLOAD_STORE_FILE=mawqif-release.keystore
+MAWQIF_UPLOAD_KEY_ALIAS=mawqif-key
+MAWQIF_UPLOAD_STORE_PASSWORD=your_keystore_password_here
+MAWQIF_UPLOAD_KEY_PASSWORD=your_key_password_here
+
+# Hermes Engine (enabled by default in Expo)
+hermesEnabled=true
+
+# Memory Settings (adjust if needed)
+org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError
+org.gradle.daemon=true
+org.gradle.parallel=true
+org.gradle.configureondemand=true
