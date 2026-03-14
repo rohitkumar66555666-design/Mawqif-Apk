@@ -2,8 +2,8 @@ import { CacheService } from './cache.service';
 
 // Offline-aware directions service
 export class OfflineDirectionsService {
-  private static readonly GOOGLE_DIRECTIONS_API = 'https://maps.googleapis.com/maps/api/directions/json';
-  private static readonly API_KEY = 'AIzaSyCpli_YKmt4shsEsHhqBocM4Fq_pTxj-sM';
+  private static readonly GOOGLE_DIRECTIONS_API = ;
+  private static readonly API_KEY = '';
 
   // Get directions with offline fallback
   static async getDirections(
