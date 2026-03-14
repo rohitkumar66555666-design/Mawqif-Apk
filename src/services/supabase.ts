@@ -2,8 +2,8 @@ import { createClient } from '@supabase/supabase-js';
 import Constants from 'expo-constants';
 
 // Get Supabase credentials from app.json extra configuration
-const supabaseUrl = Constants.expoConfig?.extra?.supabaseUrl || 'https://sqsawueagugzcgpbwsyi.supabase.co';
-const supabaseAnonKey = Constants.expoConfig?.extra?.supabaseAnonKey || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxc2F3dWVhZ3VnemNncGJ3c3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMwMTM2NTEsImV4cCI6MjA3ODU4OTY1MX0.vv64OV3IwRc7rggyL6hKBYp9zjtXPV0I5nscR4xImXo';
+const supabaseUrl = Constants.expoConfig?.extra?.supabaseUrl || ;
+const supabaseAnonKey = Constants.expoConfig?.extra?.supabaseAnonKey ||; 
 
 // Debug logging
 console.log('🔧 Supabase Configuration:');
