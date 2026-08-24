@@ -23,14 +23,24 @@ jobs:
       with:
         channel: 'stable'
 
-    - name: Install Dependencies
-      run: flutter pub get
-
-    - name: Build APK
-      run: flutter build apk --release
+    - name: Find Flutter Root & Build
+      run: |
+        # Check if pubspec.yaml is in root or subfolder
+        if [ -f "pubspec.yaml" ]; then
+          echo "Flutter project found in root"
+          flutter pub get
+          flutter build apk --release
+        else
+          echo "Searching for Flutter project in subdirectories..."
+          SUBDIR=$(dirname $(find . -maxdepth 2 -name "pubspec.yaml" | head -n 1))
+          echo "Found project in $SUBDIR"
+          cd $SUBDIR
+          flutter pub get
+          flutter build apk --release
+        fi
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: release-apk
-        path: build/app/outputs/flutter-apk/app-release.apk
+        path: "**/build/app/outputs/flutter-apk/app-release.apk"
